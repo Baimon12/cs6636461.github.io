@@ -1,0 +1,60 @@
+body {
+     font-family: Arial, Helvetica, sans-serif;     
+}
+table {
+    border-collapse: collapse;
+
+    width: 90%;
+    margin: auto;
+}
+a {
+    color: #2347e4;
+    
+}
+th , td {
+    border: 1.5px solid #c7c7c7;
+    padding: 6px 10px;
+    text-align: center;
+    font-size: 12px;
+}
+th {
+    background-color: #eaebe9;
+}
+.type {
+    background-color: #eaebe9;
+    font-weight: bold;
+}
+.type-planet {
+    background-color:#f7f7f7;
+}
+th.planet-name {
+    border-top: 2px solid #3f3c3c;
+    border-right: 2px solid #3f3c3c;
+    border-left: 2px solid #3f3c3c;
+    background-color: #ebebeb;
+    
+    
+}
+td.planet-name{
+    border-left:  2px solid #3f3c3c;
+    border-right:  2px solid #3f3c3c;
+    background-color:#ebebeb;
+    font-weight: bold;
+}
+.planet-name-p {
+    border-bottom:  2px solid #3f3c3c;
+    border-left:  2px solid #3f3c3c;
+    border-right:  2px solid #3f3c3c;
+    background-color: #ebebeb;
+    font-weight: bold;
+    
+}
+td.ice , td.gas {
+    background-color: #ebebeb;
+    font-weight: bold;
+}   
+tbody tr:nth-child(odd) {
+    background-color: #f7f7f7;
+}
+
+
