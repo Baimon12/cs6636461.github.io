@@ -8,6 +8,11 @@
         #post_code,#num_travels{
             width: 60px;
         }
+        input:invalid {
+            border: red solid 2px;
+        }
+        
+        
     </style>
 </head>
 <body>
@@ -22,8 +27,9 @@
                 <input type="email" id="email" name="email" >*<br>
                 
                 <label>โทรศัพท์:</label><br>
-                <input type="tel" id="phone" name="phone" 
-                pattern="[0-9]{10}" placeholder="+66">*<br>
+                
+                <input type="tel" id="phone" name="phone"  value="+66" 
+                pattern="^\+66[0-9]{9}" placeholder="+66" >*<br>
 
                 <label>ที่อยู่:</label><br>
                 <textarea name="address" rows="3" cols="30"></textarea></label><br>
