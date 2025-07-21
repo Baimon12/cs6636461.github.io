@@ -63,8 +63,12 @@
  
      <!-- อาการป่วย -->
     <label>7.อาการป่วย :</label>
-    <input type="text" id="symptoms" name="symptoms"  placeholder="กรุณากรอกอาการป่วย"></input><br><br>
-
+    <input type="checkbox" id="fever" name="symptoms" value="fever">ไข้
+    <input type="checkbox" id="cough" name="symptoms" value="cough">ไอ
+    <input type="checkbox" id="sore_throat" name="symptoms" value="sore_throat">เจ็บคอ
+    <input type="checkbox" id="runny_nose" name="symptoms" value="runny_nose">น้ำมูกไหล
+    <input type="checkbox" id="headache" name="symptoms" value="headache">ปวดหัว
+    <br><br>
     <!-- เคยได้รับวัคซีนหรือไม่ -->
     <label>8.ในช่วง 3 เดือนที่ผ่านมา เคยได้รับวัคซีนหรือไม่ :</label>
     <input type="radio" id="vaccine_yes" name="vaccine" value="yes">เคย
@@ -78,7 +82,41 @@
 
     <!-- วันเวลาที่ต้องไปพบแพทย์ -->
     <label>10. วันเวลาที่ต้องไปพบแพทย์ :</label>
-    <input type="datetime-local" id="appointment" name="appointment" ><br><br>
+    <input type="datetime-local" id="appointment" name="appointment" ><br>
+
+    <p>11.<label>รหัสผ่าน 5 อักขระเป็นต้นไป ที่ต้องประกอบด้วยอักขระตัวใหญ่ ตัวเล็กและตัวเลข อย่างน้อยชนิดละ 1 อักขระ</label></p>
+    <input type="password" 
+    id="password" 
+    name="password" 
+    pattern="(?=.*[a-z])(?=.*[A-Z])(?=.*\d).{5,}" 
+    placeholder="AaBb45" ><br>
+
+    <!-- บ้านเลขที่ -->
+    <p>12.<label>บ้านเลขที่ :</label></p>
+    <input type="text" 
+    id="house_number" 
+    name="house_number" 
+    placeholder="235/4 69"
+    pattern="[0-9]+/?[0-9]+"
+    ><br>
+
+    <!-- รหัสสินค้า -->
+    <p>13.<label>รหัสสินค้า 3 ตัวแรกเป็นอักขระตัวใหญ่ตามด้วยตัวเลข 2 ตัวเท่านั้น” : </label></p>
+    <input type="text" 
+    id="product_code" 
+    name="product_code"
+    pattern="^[A-Z]{3}[0-9]{2}"
+    placeholder="AAA89"
+    ><br>
+
+    <!--ชื่อ นามสกุล ไทย-->
+    <p>14.<label>ชื่อ นามสกุล (ภาษาไทย) :</label></p>
+    <input type="text"
+    id="name"
+    name="name"
+    pattern="^[ก-๙]+\s[ก-๙]+"
+    placeholder="สมหญิง น่ารัก"
+    ><br><br>
 
 
   <input type="submit" value="Submit">
