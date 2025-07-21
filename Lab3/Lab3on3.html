@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Lab3no3</title>
+  <style>
+    table {
+      border: 2px solid black;
+    }
+    td {
+      padding: 5px 12px;
+      border: 2px solid black;
+    }
+    input:invalid {
+      border: red solid 2px;
+    }
+    input,
+    input:valid {
+      border: green solid 2px;
+    }
+  </style>
+</head>
+<body>
+  <form action="success.html" method="get">
+    <h1>เข้าสู่ระบบ</h1>
+    <table>
+      <tr>
+        <td>Username:</td>
+        <td><input type="text" name="username" required autofocus/></td>
+      </tr>
+      <tr>
+        <td>Password:</td>
+        <td><input type="password" name="password" required /></td>
+      </tr>
+      <tr>
+        <td colspan="2">
+          กรุณาพิมพ์ตามตัวเลขที่ปรากฏ:<br>
+          1559<br>
+          <input type="text" name="number" pattern="1559" required />
+        </td>
+      </tr>
+    </table>
+
+
+    <input type="image" src="login.png" alt="Login" width="100" height="40" />
+  </form>
+</body>
+</html>

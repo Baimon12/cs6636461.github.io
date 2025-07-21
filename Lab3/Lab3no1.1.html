@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab3no1</title>
+    <style type="text/css">
+	  input:invalid {
+	    border: red solid 2px;
+	  }
+	  input,
+	  input:valid {
+	    border:green solid 2px;
+	  }
+	</style>
+
+</head>
+<body>
+<form action="form-echo.php" method="get">
+    <!-- สาขา -->
+  <label>1. สาขา :</label>
+  <select name="major" id="major" >
+    <option value="">Please choose</option>
+    <option value="CS">CS</option>
+    <option value="IC">IC</option>
+    <option value="MA">MA</option>
+    <option value="IMI">IMI</option>
+    <option value="AS">AS</option>
+    <option value="AFET">AFET</option>
+  </select><br><br>
+    <!-- จำนวนที่โอน -->
+  <label>2.จำนวนที่โอน :</label>
+  <input type="number" id="amount" name="amount" min="1" step="0.01" placeholder="จำนวนเงินที่โอน"><br><br>
+    <!-- อาหารที่ชอบ -->
+  <label>3. อาหารที่ชื่นชอบ 5 ชนิด (จากมากไปน้อย) :</label><br>
+
+  <input type="text" id="food1" name="food1" placeholder="อาหารชนิดที่ 1"><br>
+  <input type="text" id="food2" name="food2" placeholder="อาหารชนิดที่ 2"><br>
+  <input type="text" id="food3" name="food3" placeholder="อาหารชนิดที่ 3"><br>
+  <input type="text" id="food4" name="food4" placeholder="อาหารชนิดที่ 4"><br>
+  <input type="text" id="food5" name="food5" placeholder="อาหารชนิดที่ 5"><br><br>
+
+  <!-- ค่าไฟ3เดือนที่ผ่านมา -->
+ <label>4. ค่าไฟ 3 เดือนที่ผ่านมา</label><br>
+  
+    <input type="number" id="electricity1" name="electricity1" placeholder="เดือนที่ 1" ><br>
+   
+  <input type="number" id="electricity2" name="electricity2" placeholder="เดือนที่ 2" ><br>
+
+  <input type="number" id="electricity3" name="electricity3" placeholder="เดือนที่ 3" ><br><br>
+
+   <!-- รหัสบัตรประชาชน -->
+    <label>5. รหัสบัตรประชาชน :</label>
+    <input type="text" id="id_card" name="id_card" pattern="[0-9]{13}" placeholder="กรุณากรอก 13 หลัก" maxlength="13"><br><br>
+
+    <!-- ความพึงพอใจ -->
+     <label>6. ความพึงพอใจต่อหนังสือเล่มนี้ (1 น้อยที่สุด - 5 มากที่สุด) :</label>
+     <input type="radio" id="satisfaction5" name="satisfaction" value="มากที่สุด">5
+     <input type="radio" id="satisfaction4" name="satisfaction" value="มาก">4
+     <input type="radio" id="satisfaction3" name="satisfaction" value="ปานกลาง">3
+     <input type="radio" id="satisfaction2" name="satisfaction" value="น้อย">2
+     <input type="radio" id="satisfaction1" name="satisfaction" value="น้อยที่สุด">1<br><br>
+ 
+     <!-- อาการป่วย -->
+    <label>7.อาการป่วย :</label>
+    <input type="text" id="symptoms" name="symptoms"  placeholder="กรุณากรอกอาการป่วย"></input><br><br>
+
+    <!-- เคยได้รับวัคซีนหรือไม่ -->
+    <label>8.ในช่วง 3 เดือนที่ผ่านมา เคยได้รับวัคซีนหรือไม่ :</label>
+    <input type="radio" id="vaccine_yes" name="vaccine" value="yes">เคย
+    <input type="radio" id="vaccine_no" name="vaccine" value="no">ไม่เคย<br><br>
+ 
+    <!-- เวลาเริ่มและสิ้นสุดเข้าเรียน -->
+    <label>9.เวลาเริ่มเข้าเรียน :</label>
+    <input type="time" id="start_time" name="start_time" >
+    <label>เวลาเลิกเรียน :</label>
+    <input type="time" id="end_time" name="end_time" ><br><br>
+
+    <!-- วันเวลาที่ต้องไปพบแพทย์ -->
+    <label>10. วันเวลาที่ต้องไปพบแพทย์ :</label>
+    <input type="datetime-local" id="appointment" name="appointment" ><br><br>
+
+
+  <input type="submit" value="Submit">
+</form>
+
+     </form>
+</body>
+</html>
