@@ -6,17 +6,15 @@
     <title>Lab3no1</title>
     <style type="text/css">
 	  input:invalid {
-	    border: red solid 2px;
+	    border: red solid 3px;
 	  }
-	  input,
-	  input:valid {
-	    border:green solid 2px;
-	  }
+	  
 	</style>
 
 </head>
 <body>
-<form action="form-echo.php" method="get">
+<form action="../form-echo.php" method="get">
+  <h2>ข้อ 1.1 จงสร้าง Form โดยเลือกใช้ Input Type ที่เหมาะสม</h2>
     <!-- สาขา -->
   <label>1. สาขา :</label>
   <select name="major" id="major" >
@@ -30,7 +28,7 @@
   </select><br><br>
     <!-- จำนวนที่โอน -->
   <label>2.จำนวนที่โอน :</label>
-  <input type="number" id="amount" name="amount" min="1" step="0.01" placeholder="จำนวนเงินที่โอน"><br><br>
+  <input type="number" id="amount" name="amount" min="1" step="1" placeholder="จำนวนเงินที่โอน"><br><br>
     <!-- อาหารที่ชอบ -->
   <label>3. อาหารที่ชื่นชอบ 5 ชนิด (จากมากไปน้อย) :</label><br>
 
@@ -62,12 +60,12 @@
      <input type="radio" id="satisfaction1" name="satisfaction" value="น้อยที่สุด">1<br><br>
  
      <!-- อาการป่วย -->
-    <label>7.อาการป่วย :</label>
-    <input type="checkbox" id="fever" name="symptoms" value="fever">ไข้
-    <input type="checkbox" id="cough" name="symptoms" value="cough">ไอ
-    <input type="checkbox" id="sore_throat" name="symptoms" value="sore_throat">เจ็บคอ
-    <input type="checkbox" id="runny_nose" name="symptoms" value="runny_nose">น้ำมูกไหล
-    <input type="checkbox" id="headache" name="symptoms" value="headache">ปวดหัว
+    <label>7.อาการป่วย :</label><br>
+    <input type="checkbox" id="fever" name="symptoms" value="fever">ไข้<br>
+    <input type="checkbox" id="cough" name="symptoms" value="cough">ไอ<br>
+    <input type="checkbox" id="sore_throat" name="symptoms" value="sore_throat">เจ็บคอ<br>
+    <input type="checkbox" id="runny_nose" name="symptoms" value="runny_nose">น้ำมูกไหล<br>
+    <input type="checkbox" id="headache" name="symptoms" value="headache">ปวดหัว<br>
     <br><br>
     <!-- เคยได้รับวัคซีนหรือไม่ -->
     <label>8.ในช่วง 3 เดือนที่ผ่านมา เคยได้รับวัคซีนหรือไม่ :</label>
@@ -84,6 +82,7 @@
     <label>10. วันเวลาที่ต้องไปพบแพทย์ :</label>
     <input type="datetime-local" id="appointment" name="appointment" ><br>
 
+    <h2>ข้อ 1.2 จงใช้ pattern Attribute เพื่อตรวจสอบรูปแบบของข้อมูลต่อไปนี้</h2>
     <p>11.<label>รหัสผ่าน 5 อักขระเป็นต้นไป ที่ต้องประกอบด้วยอักขระตัวใหญ่ ตัวเล็กและตัวเลข อย่างน้อยชนิดละ 1 อักขระ</label></p>
     <input type="password" 
     id="password" 
@@ -97,7 +96,7 @@
     id="house_number" 
     name="house_number" 
     placeholder="235/4 69"
-    pattern="[0-9]+/?[0-9]+"
+    pattern="[0-9]+(/[0-9]+)?"
     ><br>
 
     <!-- รหัสสินค้า -->
@@ -115,13 +114,12 @@
     id="name"
     name="name"
     pattern="^[ก-๙]+\s[ก-๙]+"
-    placeholder="สมหญิง น่ารัก"
+    placeholder="ลาบูต๊อง ไทยแลนด์แดนสยาม"
     ><br><br>
 
 
   <input type="submit" value="Submit">
 </form>
 
-     </form>
 </body>
 </html>
